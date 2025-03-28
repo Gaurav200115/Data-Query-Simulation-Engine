@@ -1,0 +1,24 @@
+{
+  "name": "growthgear",
+  "version": "1.0.0",
+  "description": "Backend server made by Gaurav Mishra",
+  "homepage": "https://github.com/Gaurav200115/Data-Query-Simulation-Engine#readme",
+  "bugs": {
+    "url": "https://github.com/Gaurav200115/Data-Query-Simulation-Engine/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gaurav200115/Data-Query-Simulation-Engine.git"
+  },
+  "license": "ISC",
+  "author": "Gaurav Mishra",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}
