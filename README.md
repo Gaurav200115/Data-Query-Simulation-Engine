@@ -60,7 +60,7 @@ This project is a lightweight backend service that simulates a simplified versio
 2. Select **POST** request.
 3. In the URL, enter:
    ```bash
-   http://localhost:5000/api/query
+   https://data-query-simulation-engine.onrender.com/api/query
    ```
 4. Go to **Headers** tab:
    - Add `x-api-key` → `my_secret_key`.
