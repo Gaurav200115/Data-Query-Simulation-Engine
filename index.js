@@ -1,13 +1,13 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const cors = require("cors");
-const queryProcessor = require("./queryProcessor");
+const queryRoutes = require("./routes/queryRoutes");
+require("dotenv").config();
 
 const app = express();
 
 // Middleware
 app.use(cors()); // Allow cross-origin requests
-app.use(bodyParser.json()); // Parse JSON body
+app.use(express.json()); // Parse JSON body
 
 // Load API Key from Environment Variables (For Security)
 const API_KEY = process.env.API_KEY || "my_secret_key";
@@ -21,15 +21,8 @@ app.use((req, res, next) => {
     next();
 });
 
-// API Endpoints
-app.post("/api/query", (req, res) => {
-    const { query } = req.body;
-    if (!query) {
-        return res.status(400).json({ message: "Query is required" });
-    }
-    const result = queryProcessor.getData(query);
-    res.json(result);
-});
+// API Routes
+app.use("/api", queryRoutes);
 
 // Dynamic Port for Render Deployment
 const PORT = process.env.PORT || 5000;
